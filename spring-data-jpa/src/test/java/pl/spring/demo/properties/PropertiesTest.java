@@ -4,21 +4,32 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.support.AnnotationConfigContextLoader;
+
+import pl.spring.demo.config.AppConfiguraion;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration
+// @ContextConfiguration
+@ContextConfiguration(loader = AnnotationConfigContextLoader.class)
 public class PropertiesTest {
 
-    @Value(value = "#{applicationProperties['app.name']}")
-    private String applicationName;
+	@Configuration
+	@Import(AppConfiguraion.class)
+	static class ContextConfiguration {
+	}
 
-    @Test
-    public void testShouldCheckApplicationName() {
-        // given
-        final String appName = "starter-kit";
-        // when then
-        Assert.assertEquals(appName, applicationName);
-    }
+	@Value("${app.name}")
+	private String applicationName;
+
+	@Test
+	public void testShouldCheckApplicationName() {
+		// given
+		final String appName = "starter-kit";
+		// when then
+		Assert.assertEquals(appName, applicationName);
+	}
 }

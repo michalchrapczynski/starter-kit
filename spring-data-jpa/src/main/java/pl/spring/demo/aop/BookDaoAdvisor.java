@@ -1,22 +1,31 @@
 package pl.spring.demo.aop;
 
-import java.lang.reflect.Method;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-import org.springframework.aop.MethodBeforeAdvice;
-import org.springframework.stereotype.Service;
-
-import pl.spring.demo.annotation.NullableId;
+import pl.spring.demo.common.Sequence;
+import pl.spring.demo.dao.BookDao;
 import pl.spring.demo.exception.BookNotNullIdException;
+import pl.spring.demo.to.BookEntity;
 import pl.spring.demo.to.IdAware;
 
-@Service
-public class BookDaoAdvisor implements MethodBeforeAdvice {
+@Aspect
+@Component
+public class BookDaoAdvisor {
 
-	@Override
-	public void before(Method method, Object[] objects, Object o) throws Throwable {
+	@Autowired
+	private Sequence sequence;
 
-		if (hasAnnotation(method, o, NullableId.class)) {
-			checkNotNullId(objects[0]);
+	@Before(value = "@annotation(pl.spring.demo.annotation.NullableId)")
+	public void before(JoinPoint joinPoint) {
+		Object[] arguments = joinPoint.getArgs();
+		if (arguments[0] instanceof BookEntity) {
+			checkNotNullId(arguments[0]);
+			BookDao bookDaoImpl = (BookDao) joinPoint.getThis();
+			((BookEntity) arguments[0]).setId(sequence.nextValue(bookDaoImpl.findAll()));
 		}
 	}
 
@@ -26,13 +35,4 @@ public class BookDaoAdvisor implements MethodBeforeAdvice {
 		}
 	}
 
-	private boolean hasAnnotation(Method method, Object o, Class annotationClazz) throws NoSuchMethodException {
-		boolean hasAnnotation = method.getAnnotation(annotationClazz) != null;
-
-		if (!hasAnnotation && o != null) {
-			hasAnnotation = o.getClass().getMethod(method.getName(), method.getParameterTypes())
-					.getAnnotation(annotationClazz) != null;
-		}
-		return hasAnnotation;
-	}
 }
