@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 
 import pl.spring.demo.common.Sequence;
 import pl.spring.demo.dao.BookDao;
+import pl.spring.demo.entity.BookEntity;
 import pl.spring.demo.exception.BookNotNullIdException;
-import pl.spring.demo.to.BookEntity;
 import pl.spring.demo.to.IdAware;
 
 @Aspect

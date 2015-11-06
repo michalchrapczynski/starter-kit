@@ -2,11 +2,11 @@ package pl.spring.demo.service;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.util.List;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +19,8 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import junit.framework.Assert;
 import pl.spring.demo.config.AppConfiguraion;
 import pl.spring.demo.dao.BookDao;
+import pl.spring.demo.entity.BookEntity;
 import pl.spring.demo.exception.BookNotNullIdException;
-import pl.spring.demo.to.BookEntity;
 import pl.spring.demo.to.BookTo;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -39,7 +39,6 @@ public class BookServiceImplTest {
 	public BookDao bookDao;
 
 	@Test
-	@Ignore
 	public void testShouldFindAllBooksByTitle() {
 		// given
 		final String title = "Opium w rosole";
@@ -69,6 +68,39 @@ public class BookServiceImplTest {
 		BookEntity result = bookDao.save(bookToSave);
 		// then
 		Assert.assertEquals(6L, result.getId().longValue());
+	}
+
+	@Test
+	public void testShouldFindAllBooksByAuthor() {
+		// given
+		final String author = "Wiliam Szekspir";
+		// when
+		List<BookTo> booksByAuthor = bookService.findBooksByAuthor(author);
+		// then
+		assertNotNull(booksByAuthor);
+		assertFalse(booksByAuthor.isEmpty());
+	}
+
+	@Test
+	public void testShouldFindAllBooksByAuthorNoExist() {
+		// given
+		final String author = "Julian Tuwim";
+		// when
+		List<BookTo> booksByAuthor = bookService.findBooksByAuthor(author);
+		// then
+		assertNotNull(booksByAuthor);
+		assertTrue(booksByAuthor.isEmpty());
+	}
+
+	@Test
+	public void testShouldFindAllBooksByAuthorIgnoreCase() {
+		// given
+		final String author = "wiliam szeKSpir";
+		// when
+		List<BookTo> booksByAuthor = bookService.findBooksByAuthor(author);
+		// then
+		assertNotNull(booksByAuthor);
+		assertFalse(booksByAuthor.isEmpty());
 	}
 
 }

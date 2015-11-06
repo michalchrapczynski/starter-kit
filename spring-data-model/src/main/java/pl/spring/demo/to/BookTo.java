@@ -29,16 +29,8 @@ public class BookTo implements IdAware {
 		return title;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
 	public List<AthorTo> getAuthors() {
 		return authors;
-	}
-
-	public void setAuthors(List<AthorTo> authors) {
-		this.authors = authors;
 	}
 
 }

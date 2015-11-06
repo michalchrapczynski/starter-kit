@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.core.convert.converter.Converter;
 
+import pl.spring.demo.entity.BookEntity;
 import pl.spring.demo.to.AthorTo;
-import pl.spring.demo.to.BookEntity;
 import pl.spring.demo.to.BookTo;
 
 public class BookToTOBookEntity implements Converter<BookTo, BookEntity> {

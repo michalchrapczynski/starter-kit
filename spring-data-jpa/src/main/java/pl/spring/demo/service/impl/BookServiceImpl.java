@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 import pl.spring.demo.converter.BookEntityTOBookTo;
 import pl.spring.demo.converter.BookToTOBookEntity;
 import pl.spring.demo.dao.BookDao;
+import pl.spring.demo.entity.BookEntity;
 import pl.spring.demo.service.BookService;
-import pl.spring.demo.to.BookEntity;
 import pl.spring.demo.to.BookTo;
 
 @Service
@@ -57,7 +57,8 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public BookTo saveBook(BookTo book) {
 		BookEntity bookEntity = bookToTOBookEntity.convert(book);
-		BookTo bookTo = bookEntityTOBookTo.convert(bookDao.save(bookEntity));
+		BookEntity save = bookDao.save(bookEntity);
+		BookTo bookTo = bookEntityTOBookTo.convert(save);
 		return bookTo;
 	}
 

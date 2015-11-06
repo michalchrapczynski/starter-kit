@@ -17,8 +17,8 @@ import org.mockito.MockitoAnnotations;
 import pl.spring.demo.converter.BookEntityTOBookTo;
 import pl.spring.demo.converter.BookToTOBookEntity;
 import pl.spring.demo.dao.BookDao;
+import pl.spring.demo.entity.BookEntity;
 import pl.spring.demo.service.impl.BookServiceImpl;
-import pl.spring.demo.to.BookEntity;
 import pl.spring.demo.to.BookTo;
 
 /**
@@ -59,6 +59,19 @@ public class BookServiceImplTest {
 		// given
 		BookEntity book = new BookEntity(null, "title", null);
 		Mockito.when(bookDao.save(book)).thenReturn(new BookEntity(1L, "title", null));
+		BookTo bookTo = bookEntityTOBookTo.convert(book);
+		// when
+		BookTo result = bookService.saveBook(bookTo);
+		// then
+		Mockito.verify(bookDao).save(book);
+		assertEquals(1L, result.getId().longValue());
+	}
+
+	@Test
+	public void testShouldSaveBook3() {
+		// given
+		BookEntity book = new BookEntity(null, null, "name surname");
+		Mockito.when(bookDao.save(book)).thenReturn(new BookEntity(1L, null, "name surname"));
 		BookTo bookTo = bookEntityTOBookTo.convert(book);
 		// when
 		BookTo result = bookService.saveBook(bookTo);

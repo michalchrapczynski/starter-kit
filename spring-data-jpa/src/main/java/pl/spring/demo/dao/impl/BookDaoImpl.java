@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 import pl.spring.demo.annotation.NullableId;
 import pl.spring.demo.dao.BookDao;
-import pl.spring.demo.to.BookEntity;
+import pl.spring.demo.entity.BookEntity;
 
 @Component
 public class BookDaoImpl implements BookDao {
@@ -27,12 +27,24 @@ public class BookDaoImpl implements BookDao {
 
 	@Override
 	public List<BookEntity> findBookByTitle(String title) {
-		return null;
+		List<BookEntity> booksFindByTitle = new ArrayList<>();
+		for (BookEntity bookEntity : ALL_BOOKS) {
+			if (bookEntity.getTitle().contains(title)) {
+				booksFindByTitle.add(bookEntity);
+			}
+		}
+		return booksFindByTitle;
 	}
 
 	@Override
 	public List<BookEntity> findBooksByAuthor(String author) {
-		return null;
+		List<BookEntity> booksFindByAuthor = new ArrayList<>();
+		for (BookEntity bookEntity : ALL_BOOKS) {
+			if (bookEntity.getAuthors().equalsIgnoreCase(author)) {
+				booksFindByAuthor.add(bookEntity);
+			}
+		}
+		return booksFindByAuthor;
 	}
 
 	@Override

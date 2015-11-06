@@ -1,4 +1,6 @@
-package pl.spring.demo.to;
+package pl.spring.demo.entity;
+
+import pl.spring.demo.to.IdAware;
 
 public class BookEntity implements IdAware {
 	private Long id;
@@ -27,16 +29,8 @@ public class BookEntity implements IdAware {
 		return title;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
 	public String getAuthors() {
 		return authors;
-	}
-
-	public void setAuthors(String authors) {
-		this.authors = authors;
 	}
 
 	@Override
