@@ -8,30 +8,38 @@
            table {
 	            border-collapse: collapse;
 	            width: 400px; }
-           td {
+           #boo td {
 	            border: 2px solid #000000;
 	            padding: 5px;}
-           .book {
+           #boo .book {
                 font-weight: bold;
                 background-color: #C0C0C0; }  
+           #boo .bookDel {
+                font-weight: bold;
+                background-color: #FF0033; }  
      </style>
 </head>
 <body>
-	<table class = "book">
-    <div th:each="book : ${books}">
-       <tr>
+<table id = "boo">
+	<div th:each="book : ${bookDelete}">
+       <tr class = "bookDel">
        <td><p th:text="${book.id}">id</p></td>
        <td><p th:text="${book.title}">title</p></td> 
        <td><p th:text="${book.authors}">authors</p></td> 
-         <td> 	<a  th:href="@{|/bookDelete/${book.id}|}"><span>Delete</span></a>
-          </td>
+       <td><label>Pozycja usunieta</label></td>
+       </tr>
+    </div>
+	
+	
+    <div th:each="book : ${books}">
+       <tr class = "book">
+       <td><p th:text="${book.id}">id</p></td>
+       <td><p th:text="${book.title}">title</p></td> 
+       <td><p th:text="${book.authors}">authors</p></td> 
+         <td> <a  th:href="@{|/bookDelete/${book.id}|}"><span>Delete</span></a> </td>
        </tr>
     </div>
     </table>
-    
-
-
-	
     
 </body>
 </html>

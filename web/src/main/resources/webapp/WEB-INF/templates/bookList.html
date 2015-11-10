@@ -3,10 +3,35 @@
 <head lang="en">
     <meta charset="UTF-8"/>
     <title>Lista książek</title>
+    
+     <style>  
+           table {
+	            border-collapse: collapse;
+	            width: 400px; }
+           td {
+	            border: 2px solid #000000;
+	            padding: 5px;}
+           .book {
+                font-weight: bold;
+                background-color: #C0C0C0; }  
+     </style>
 </head>
 <body>
+	<table class = "book">
     <div th:each="book : ${books}">
-        <p th:text="${book.title}">title</p>
+       <tr>
+       <td><p th:text="${book.id}">id</p></td>
+       <td><p th:text="${book.title}">title</p></td> 
+       <td><p th:text="${book.authors}">authors</p></td> 
+         <td> 	<a  th:href="@{|/bookDelete/${book.id}|}"><span>Delete</span></a>
+          </td>
+       </tr>
     </div>
+    </table>
+    
+
+
+	
+    
 </body>
 </html>
