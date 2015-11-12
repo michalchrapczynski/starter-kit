@@ -41,8 +41,22 @@ public class BookController {
 		}
 		allBooks = bookService.findAllBooks();
 		params.put("books", allBooks);
-
 		return "bookDelete";
-
 	}
+
+	@RequestMapping(value = "/books/add", method = RequestMethod.POST)
+	public String bookAdd(@ModelAttribute(value = "title") String title,
+			@ModelAttribute(value = "authors") String authors, Map<String, Object> params) {
+		Long newID = (long) bookService.findAllBooks().size();
+
+		BookTo bookAdd = new BookTo(newID + 1, title, authors);
+
+		if (title.length() > 0 && authors.length() > 0) {
+			bookService.saveBook(bookAdd);
+		}
+		allBooks = bookService.findAllBooks();
+		params.put("books", allBooks);
+		return "bookList";
+	}
+
 }

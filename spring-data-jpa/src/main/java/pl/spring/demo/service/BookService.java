@@ -15,4 +15,6 @@ public interface BookService {
 	BookTo saveBook(BookTo book);
 
 	void removeBook(BookTo book);
+
+	void removeBookPoster(Long id);
 }

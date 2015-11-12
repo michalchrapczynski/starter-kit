@@ -16,7 +16,10 @@
                 background-color: #C0C0C0; }  
            #boo .bookDel {
                 font-weight: bold;
-                background-color: #FF0033; }  
+                background-color: #FF0033; } 
+		   #boo .bookAdd {
+                font-weight: bold;
+                background-color: #FFCC00; } 
      </style>
 </head>
 <body>
@@ -39,6 +42,17 @@
          <td> <a  th:href="@{|/bookDelete/${book.id}|}"><span>Delete</span></a> </td>
        </tr>
     </div>
+    
+       <tr class = "bookAdd">
+    	<tr class = "bookAdd">
+      	  <form th:action="@{|/books/add|}" method="post">
+      	     <td><label></label></td>
+      		 <td><input type="text" name="title">Tytuł nowej ksiązki</input></td>
+      		 <td><input type="text" name="authors">Imię i nazwisko autora</input></td>
+      		 <td><input type="submit" value="Submit"></input></td>
+      	  </form>
+      	</tr>
+    </tr>
     </table>
     
 </body>
