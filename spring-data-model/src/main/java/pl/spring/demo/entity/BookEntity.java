@@ -1,13 +1,17 @@
 package pl.spring.demo.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -19,21 +23,26 @@ public class BookEntity implements Serializable {
 	private Long id;
 	@Column(nullable = false, length = 50)
 	private String title;
-	@Column(nullable = false, length = 200)
-	private String authors;
 
-	@JoinColumn(name = "Library_Name")
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "BOOK_AUTHOR", joinColumns = {
+			@JoinColumn(name = "id_book", updatable = false, nullable = false) }, inverseJoinColumns = {
+					@JoinColumn(name = "id_author", updatable = false, nullable = false) })
+	private List<AuthorEntity> authors;
+
 	@ManyToOne
-	private String libraryName;
+	@JoinColumn(name = "library_id", nullable = false)
+	private LibraryEntity libraryName;
 
-	// for hibernate
 	protected BookEntity() {
+		// for hibernate
 	}
 
-	public BookEntity(Long id, String title, String authors) {
+	public BookEntity(Long id, String title, List<AuthorEntity> authors, LibraryEntity libraryName) {
 		this.id = id;
 		this.title = title;
 		this.authors = authors;
+		this.libraryName = libraryName;
 	}
 
 	public Long getId() {
@@ -52,11 +61,20 @@ public class BookEntity implements Serializable {
 		this.title = title;
 	}
 
-	public String getAuthors() {
+	public List<AuthorEntity> getAuthors() {
 		return authors;
 	}
 
-	public void setAuthors(String authors) {
+	public void setAuthors(List<AuthorEntity> authors) {
 		this.authors = authors;
 	}
+
+	public LibraryEntity getLibraryName() {
+		return libraryName;
+	}
+
+	public void setLibraryName(LibraryEntity libraryName) {
+		this.libraryName = libraryName;
+	}
+
 }

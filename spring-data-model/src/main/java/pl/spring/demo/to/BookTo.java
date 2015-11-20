@@ -1,17 +1,25 @@
 package pl.spring.demo.to;
 
+import java.util.List;
+
+import pl.spring.demo.entity.AuthorEntity;
+import pl.spring.demo.entity.LibraryEntity;
+
 public class BookTo {
 	private Long id;
 	private String title;
-	private String authors;
+	private List<AuthorEntity> authors;
+	private LibraryEntity libraryName;
 
 	public BookTo() {
 	}
 
-	public BookTo(Long id, String title, String authors) {
+	public BookTo(Long id, String title, List<AuthorEntity> authors, LibraryEntity libraryName) {
+		super();
 		this.id = id;
 		this.title = title;
 		this.authors = authors;
+		this.libraryName = libraryName;
 	}
 
 	public Long getId() {
@@ -30,12 +38,20 @@ public class BookTo {
 		this.title = title;
 	}
 
-	public String getAuthors() {
+	public List<AuthorEntity> getAuthors() {
 		return authors;
 	}
 
-	public void setAuthors(String authors) {
+	public void setAuthors(List<AuthorEntity> authors) {
 		this.authors = authors;
+	}
+
+	public LibraryEntity getLibraryName() {
+		return libraryName;
+	}
+
+	public void setLibraryName(LibraryEntity libraryName) {
+		this.libraryName = libraryName;
 	}
 
 }

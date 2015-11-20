@@ -1,4 +1,36 @@
 -------------------------------------------------------------------------------
 Test set: pl.spring.demo.repository.BookRepositoryTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.846 sec - in pl.spring.demo.repository.BookRepositoryTest
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.801 sec <<< FAILURE! - in pl.spring.demo.repository.BookRepositoryTest
+testShouldFindBookById(pl.spring.demo.repository.BookRepositoryTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertNotNull(Assert.java:712)
+	at org.junit.Assert.assertNotNull(Assert.java:722)
+	at pl.spring.demo.repository.BookRepositoryTest.testShouldFindBookById(BookRepositoryTest.java:30)
+
+testShouldFindBooksByTitle(pl.spring.demo.repository.BookRepositoryTest)  Time elapsed: 0.044 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at org.junit.Assert.assertFalse(Assert.java:74)
+	at pl.spring.demo.repository.BookRepositoryTest.testShouldFindBooksByTitle(BookRepositoryTest.java:42)
+
+testShouldFindBooksByLastNameAuthor(pl.spring.demo.repository.BookRepositoryTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at org.junit.Assert.assertFalse(Assert.java:74)
+	at pl.spring.demo.repository.BookRepositoryTest.testShouldFindBooksByLastNameAuthor(BookRepositoryTest.java:66)
+
+testShouldFindBooksByFirstNameAuthor(pl.spring.demo.repository.BookRepositoryTest)  Time elapsed: 0.029 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at org.junit.Assert.assertFalse(Assert.java:74)
+	at pl.spring.demo.repository.BookRepositoryTest.testShouldFindBooksByFirstNameAuthor(BookRepositoryTest.java:54)
+

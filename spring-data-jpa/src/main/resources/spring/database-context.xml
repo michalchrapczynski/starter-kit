@@ -24,7 +24,7 @@
         </property>
         <property name="packagesToScan">
             <array>
-                <value>pl.spring.demo.entity</value>
+                <value>pl.spring.demo</value>
             </array>
         </property>
     </bean>

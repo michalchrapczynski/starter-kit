@@ -1,62 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.spring.demo.repository.BookRepositoryTest" time="0.04" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="pl.spring.demo.repository.BookRepositoryTest" time="0.074" tests="4" errors="0" skipped="0" failures="4">
   <properties>
-    <property name="idea.version" value="13.1.6"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_40\jre\bin"/>
-    <property name="java.vm.version" value="25.40-b25"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_66\jre\bin"/>
+    <property name="java.vm.version" value="25.66-b17"/>
     <property name="user.country.format" value="DE"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\MCHRAPCZ\Documents\GitHub\starter-kit"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7536"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="Service Pack 1"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\projects\prezentation\business_logic_spring_hibernate"/>
-    <property name="java.runtime.version" value="1.8.0_40-b26"/>
+    <property name="user.dir" value="C:\Users\MCHRAPCZ\Documents\GitHub\starter-kit"/>
+    <property name="java.runtime.version" value="1.8.0_66-b17"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_40\jre\lib\endorsed"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_66\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\aotrzons\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\MCHRAPCZ\AppData\Local\Temp\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\projects\tools\apache-maven-3.2.5\bin\m2.conf"/>
+    <property name="classworlds.conf" value="C:\Users\MCHRAPCZ\workspaces\SKSpringMVC\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5615622027657722403.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_40\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Java\jdk1.8.0_40\bin;C:\projects\tools\apache-maven-3.2.5\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;C:\Program Files (x86)\Lenovo\Access Connections\;C:\Program Files (x86)\Git\bin;C:\Program Files\TortoiseSVN\bin;C:\Users\aotrzons\AppData\Roaming\npm;C:\Program Files\nodejs;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_66\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.7.0_45\bin;C:\Program Files (x86)\Java\jdk1.8.0_66\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="6.1"/>
-    <property name="user.home" value="C:\Users\aotrzons"/>
+    <property name="user.home" value="C:\Users\MCHRAPCZ"/>
     <property name="user.timezone" value="Europe/Berlin"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="idea.launcher.bin.path" value="C:\Program Files (x86)\JetBrains\IntelliJ IDEA 13.1.6\bin"/>
-    <property name="user.name" value="AOTRZONS"/>
-    <property name="java.class.path" value="C:\projects\tools\apache-maven-3.2.5\boot\plexus-classworlds-2.5.2.jar;C:\Program Files (x86)\JetBrains\IntelliJ IDEA 13.1.6\lib\idea_rt.jar"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="MCHRAPCZ"/>
+    <property name="java.class.path" value="/C:/Eclipse/Eclipse IDE for Java Developers/plugins/org.eclipse.m2e.maven.runtime_1.6.0.20150526-2031/jars/plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_40\jre"/>
-    <property name="sun.java.command" value="com.intellij.rt.execution.application.AppMain org.codehaus.classworlds.Launcher -Didea.version=13.1.6 install"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_66\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="user.language.format" value="de"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_40"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_40\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_40\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_40\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_40\jre\classes"/>
+    <property name="java.version" value="1.8.0_66"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_66\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_66\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\projects\tools\apache-maven-3.2.5"/>
+    <property name="maven.home" value="C:\Users\MCHRAPCZ\Documents\GitHub\starter-kit\EMBEDDED"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -64,5 +62,288 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testShouldFindBookById" classname="pl.spring.demo.repository.BookRepositoryTest" time="0.04"/>
+  <testcase name="testShouldFindBookById" classname="pl.spring.demo.repository.BookRepositoryTest" time="0.001">
+    <failure type="java.lang.AssertionError:">java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertNotNull(Assert.java:712)
+	at org.junit.Assert.assertNotNull(Assert.java:722)
+	at pl.spring.demo.repository.BookRepositoryTest.testShouldFindBookById(BookRepositoryTest.java:30)
+</failure>
+    <system-out><![CDATA[2015-11-20 12:32:50,610 INFO org.springframework.test.context.support.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-11-20 12:32:50,612 INFO org.springframework.test.context.support.DefaultTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-11-20 12:32:50,613 INFO org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@11900483, org.springframework.test.context.support.DirtiesContextTestExecutionListener@14a049f9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@94e51e8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5de6cf3a]
+2015-11-20 12:32:50,616 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [pl/spring/demo/repository/CommonRepositoryTest-context.xml]
+2015-11-20 12:32:50,727 INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [pl/spring/demo/common_configuration/CommonDatabase-context.xml]
+2015-11-20 12:32:51,085 INFO org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@4cc36c19: startup date [Fri Nov 20 12:32:51 CET 2015]; root of context hierarchy
+2015-11-20 12:32:51,108 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2015-11-20 12:32:51,137 INFO org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory - Creating embedded database 'dataSource'
+2015-11-20 12:32:51,142 INFO org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from class path resource [test_data_access/hsqldb_jpa.properties]
+2015-11-20 12:32:51,163 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'hsql'
+2015-11-20 12:32:51,163 INFO org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: hsql
+	...]
+2015-11-20 12:32:51,181 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@3243b914
+2015-11-20 12:32:51,182 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@3243b914
+2015-11-20 12:32:51,182 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@3243b914
+2015-11-20 12:32:51,182 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@1d730606
+2015-11-20 12:32:51,182 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@6b3e12b5
+2015-11-20 12:32:51,182 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@42463763
+2015-11-20 12:32:51,182 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@613a8ee1
+2015-11-20 12:32:51,182 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@613a8ee1
+2015-11-20 12:32:51,183 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@613a8ee1
+2015-11-20 12:32:51,183 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@6ebf0f36
+2015-11-20 12:32:51,183 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@6ebf0f36
+2015-11-20 12:32:51,183 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@6ebf0f36
+2015-11-20 12:32:51,183 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@2c532cd8
+2015-11-20 12:32:51,183 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@2c532cd8
+2015-11-20 12:32:51,184 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@2c532cd8
+2015-11-20 12:32:51,184 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@5911e990
+2015-11-20 12:32:51,184 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@5911e990
+2015-11-20 12:32:51,184 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@5911e990
+2015-11-20 12:32:51,184 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@2d1dee39
+2015-11-20 12:32:51,184 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@2d1dee39
+2015-11-20 12:32:51,184 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@2d1dee39
+2015-11-20 12:32:51,185 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@2b0f373b
+2015-11-20 12:32:51,185 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@2b0f373b
+2015-11-20 12:32:51,185 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@2b0f373b
+2015-11-20 12:32:51,185 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@70a36a66
+2015-11-20 12:32:51,185 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@70a36a66
+2015-11-20 12:32:51,185 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@70a36a66
+2015-11-20 12:32:51,186 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@25a6944c
+2015-11-20 12:32:51,186 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@25a6944c
+2015-11-20 12:32:51,186 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@1d131e1b
+2015-11-20 12:32:51,186 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@1d131e1b
+2015-11-20 12:32:51,186 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@43b6123e
+2015-11-20 12:32:51,186 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@43b6123e
+2015-11-20 12:32:51,186 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@3300f4fd
+2015-11-20 12:32:51,187 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@3a393455
+2015-11-20 12:32:51,187 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@56303b57
+2015-11-20 12:32:51,194 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@56303b57
+2015-11-20 12:32:51,194 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@101639ae
+2015-11-20 12:32:51,194 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@101639ae
+2015-11-20 12:32:51,194 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@26bab2f1
+2015-11-20 12:32:51,195 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@26bab2f1
+2015-11-20 12:32:51,195 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@424ebba3
+2015-11-20 12:32:51,195 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@424ebba3
+2015-11-20 12:32:51,195 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@424ebba3
+2015-11-20 12:32:51,195 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@7a560583
+2015-11-20 12:32:51,195 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@616fe72b
+2015-11-20 12:32:51,195 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@616fe72b
+2015-11-20 12:32:51,196 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@616fe72b
+2015-11-20 12:32:51,198 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@7e5d9a50
+2015-11-20 12:32:51,201 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@56e8b606
+2015-11-20 12:32:51,202 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@56e8b606
+2015-11-20 12:32:51,202 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@7966baa7
+2015-11-20 12:32:51,202 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@7966baa7
+2015-11-20 12:32:51,202 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@3b0c9195
+2015-11-20 12:32:51,202 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@3b0c9195
+2015-11-20 12:32:51,203 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@8c11eee
+2015-11-20 12:32:51,203 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@8c11eee
+2015-11-20 12:32:51,203 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@4bff64c2
+2015-11-20 12:32:51,203 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@4bff64c2
+2015-11-20 12:32:51,205 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@c2db68f
+2015-11-20 12:32:51,206 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@1c3b9394
+2015-11-20 12:32:51,210 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@4097cac
+2015-11-20 12:32:51,215 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@4097cac
+2015-11-20 12:32:51,215 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@4097cac
+2015-11-20 12:32:51,215 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@2101b44a
+2015-11-20 12:32:51,216 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@2101b44a
+2015-11-20 12:32:51,216 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@2101b44a
+2015-11-20 12:32:51,216 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@c055c54
+2015-11-20 12:32:51,216 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@655ef322
+2015-11-20 12:32:51,216 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@655ef322
+2015-11-20 12:32:51,216 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@655ef322
+2015-11-20 12:32:51,216 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@3ecd267f
+2015-11-20 12:32:51,217 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@3ecd267f
+2015-11-20 12:32:51,217 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@3ecd267f
+2015-11-20 12:32:51,217 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@1a9c38eb
+2015-11-20 12:32:51,217 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@3bd418e4
+2015-11-20 12:32:51,217 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@235a0c16
+2015-11-20 12:32:51,217 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@235a0c16
+2015-11-20 12:32:51,218 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@18b0930f
+2015-11-20 12:32:51,218 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@1755e85b
+2015-11-20 12:32:51,218 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@1755e85b
+2015-11-20 12:32:51,218 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@6c25e6c4
+2015-11-20 12:32:51,218 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@6c25e6c4
+2015-11-20 12:32:51,218 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@48a12036
+2015-11-20 12:32:51,219 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@b70da4c
+2015-11-20 12:32:51,219 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@b7838a9
+2015-11-20 12:32:51,219 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@73dce0e6
+2015-11-20 12:32:51,226 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@73dce0e6
+2015-11-20 12:32:51,227 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@95eb320
+2015-11-20 12:32:51,228 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@2f521c4
+2015-11-20 12:32:51,230 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@4afbb6c2
+2015-11-20 12:32:51,231 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@10db6131
+2015-11-20 12:32:51,231 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@6c6017b9
+2015-11-20 12:32:51,231 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@4730e0f0
+2015-11-20 12:32:51,231 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@506a1372
+2015-11-20 12:32:51,231 DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@1b7332a7
+2015-11-20 12:32:51,246 INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2015-11-20 12:32:51,297 INFO org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+2015-11-20 12:32:51,306 TRACE org.hibernate.type.TypeFactory - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@7b6c6e70
+2015-11-20 12:32:51,377 INFO org.hibernate.tool.hbm2ddl.SchemaExport - HHH000227: Running hbm2ddl schema export
+Hibernate: 
+    alter table book 
+        drop constraint FK_3pkewppfc8dyahqow87upbemb
+Hibernate: 
+    alter table book_author 
+        drop constraint FK_3vwtpg3a5v3kl5gsbl88113aa
+Hibernate: 
+    alter table book_author 
+        drop constraint FK_i4o9x8k93b36f2dm3e483h2rb
+Hibernate: 
+    drop table author if exists
+Hibernate: 
+    drop table book if exists
+Hibernate: 
+    drop table book_author if exists
+Hibernate: 
+    drop table library if exists
+Hibernate: 
+    create table author (
+        id bigint generated by default as identity (start with 1),
+        first_name varchar(50) not null,
+        last_name varchar(50) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table book (
+        id bigint generated by default as identity (start with 1),
+        title varchar(50) not null,
+        library_id bigint not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table book_author (
+        id_book bigint not null,
+        id_author bigint not null
+    )
+Hibernate: 
+    create table library (
+        id bigint generated by default as identity (start with 1),
+        library_name varchar(50) not null,
+        primary key (id)
+    )
+Hibernate: 
+    alter table book 
+        add constraint FK_3pkewppfc8dyahqow87upbemb 
+        foreign key (library_id) 
+        references library
+Hibernate: 
+    alter table book_author 
+        add constraint FK_3vwtpg3a5v3kl5gsbl88113aa 
+        foreign key (id_author) 
+        references author
+Hibernate: 
+    alter table book_author 
+        add constraint FK_i4o9x8k93b36f2dm3e483h2rb 
+        foreign key (id_book) 
+        references book
+2015-11-20 12:32:51,412 INFO org.hibernate.tool.hbm2ddl.SchemaExport - HHH000230: Schema export complete
+2015-11-20 12:32:51,439 WARN org.hibernate.jpa.internal.EntityManagerFactoryRegistry - HHH000436: Entity manager factory name (hsql) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+Hibernate: 
+    select
+        bookentity0_.id as id1_1_0_,
+        bookentity0_.library_id as library_3_1_0_,
+        bookentity0_.title as title2_1_0_,
+        authors1_.id_book as id_book1_1_1_,
+        authorenti2_.id as id_autho2_2_1_,
+        authorenti2_.id as id1_0_2_,
+        authorenti2_.first_name as first_na2_0_2_,
+        authorenti2_.last_name as last_nam3_0_2_,
+        libraryent3_.id as id1_3_3_,
+        libraryent3_.library_name as library_2_3_3_ 
+    from
+        book bookentity0_ 
+    left outer join
+        book_author authors1_ 
+            on bookentity0_.id=authors1_.id_book 
+    left outer join
+        author authorenti2_ 
+            on authors1_.id_author=authorenti2_.id 
+    inner join
+        library libraryent3_ 
+            on bookentity0_.library_id=libraryent3_.id 
+    where
+        bookentity0_.id=?
+2015-11-20 12:32:51,585 TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [1]
+]]></system-out>
+  </testcase>
+  <testcase name="testShouldFindBooksByTitle" classname="pl.spring.demo.repository.BookRepositoryTest" time="0.044">
+    <failure type="java.lang.AssertionError:">java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at org.junit.Assert.assertFalse(Assert.java:74)
+	at pl.spring.demo.repository.BookRepositoryTest.testShouldFindBooksByTitle(BookRepositoryTest.java:42)
+</failure>
+    <system-out><![CDATA[Hibernate: 
+    select
+        bookentity0_.id as id1_1_,
+        bookentity0_.library_id as library_3_1_,
+        bookentity0_.title as title2_1_ 
+    from
+        book bookentity0_ 
+    where
+        upper(bookentity0_.title) like (upper(?)||'%')
+2015-11-20 12:32:51,618 TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [p]
+]]></system-out>
+  </testcase>
+  <testcase name="testShouldFindBooksByLastNameAuthor" classname="pl.spring.demo.repository.BookRepositoryTest" time="0">
+    <failure type="java.lang.AssertionError:">java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at org.junit.Assert.assertFalse(Assert.java:74)
+	at pl.spring.demo.repository.BookRepositoryTest.testShouldFindBooksByLastNameAuthor(BookRepositoryTest.java:66)
+</failure>
+    <system-out><![CDATA[Hibernate: 
+    select
+        bookentity0_.id as id1_1_,
+        bookentity0_.library_id as library_3_1_,
+        bookentity0_.title as title2_1_ 
+    from
+        book bookentity0_ 
+    inner join
+        book_author authors1_ 
+            on bookentity0_.id=authors1_.id_book 
+    inner join
+        author authorenti2_ 
+            on authors1_.id_author=authorenti2_.id 
+    where
+        upper(authorenti2_.first_name) like (upper(?)||'%') 
+        or upper(authorenti2_.last_name) like (upper(?)||'%')
+2015-11-20 12:32:51,627 TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [Kowalski]
+2015-11-20 12:32:51,627 TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [Kowalski]
+]]></system-out>
+  </testcase>
+  <testcase name="testShouldFindBooksByFirstNameAuthor" classname="pl.spring.demo.repository.BookRepositoryTest" time="0.029">
+    <failure type="java.lang.AssertionError:">java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at org.junit.Assert.assertFalse(Assert.java:74)
+	at pl.spring.demo.repository.BookRepositoryTest.testShouldFindBooksByFirstNameAuthor(BookRepositoryTest.java:54)
+</failure>
+    <system-out><![CDATA[Hibernate: 
+    select
+        bookentity0_.id as id1_1_,
+        bookentity0_.library_id as library_3_1_,
+        bookentity0_.title as title2_1_ 
+    from
+        book bookentity0_ 
+    inner join
+        book_author authors1_ 
+            on bookentity0_.id=authors1_.id_book 
+    inner join
+        author authorenti2_ 
+            on authors1_.id_author=authorenti2_.id 
+    where
+        upper(authorenti2_.first_name) like (upper(?)||'%') 
+        or upper(authorenti2_.last_name) like (upper(?)||'%')
+2015-11-20 12:32:51,647 TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [Jan]
+2015-11-20 12:32:51,648 TRACE org.hibernate.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [Jan]
+]]></system-out>
+  </testcase>
 </testsuite>
