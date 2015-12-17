@@ -13,9 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import pl.spring.demo.entity.BookEntity;
 import pl.spring.demo.searchcriteria.BookSearchCriteria;
 import pl.spring.demo.service.BookService;
+import pl.spring.demo.to.BookTo;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "../service/CommonServiceTest-context.xml")
@@ -30,13 +30,13 @@ public class BookServiceImplTest {
 		BookSearchCriteria searchCriteria = new BookSearchCriteria();
 		searchCriteria.setTitle("Pierwsza książka");
 		// when
-		List<BookEntity> books = new ArrayList<BookEntity>();
+		List<BookTo> books = new ArrayList<BookTo>();
 		books = bookService.findBooksBySearchCriteria(searchCriteria);
 		// then
 		assertNotNull(books);
 		assertFalse(books.isEmpty());
-		BookEntity bookEntity = books.get(0);
-		assertEquals("Pierwsza książka", bookEntity.getTitle());
+		BookTo bookTo = books.get(0);
+		assertEquals("Pierwsza książka", bookTo.getTitle());
 	}
 
 	@Test
@@ -46,13 +46,13 @@ public class BookServiceImplTest {
 		searchCriteria.setTitle("Pierwsza książka");
 		searchCriteria.setLibraryName("Politechnika Wrocławska");
 		// when
-		List<BookEntity> books = new ArrayList<BookEntity>();
+		List<BookTo> books = new ArrayList<BookTo>();
 		books = bookService.findBooksBySearchCriteria(searchCriteria);
 		// then
 		assertNotNull(books);
 		assertFalse(books.isEmpty());
-		BookEntity bookEntity = books.get(0);
-		assertEquals("Pierwsza książka", bookEntity.getTitle());
+		BookTo bookTo = books.get(0);
+		assertEquals("Pierwsza książka", bookTo.getTitle());
 	}
 
 	@Test
@@ -63,13 +63,13 @@ public class BookServiceImplTest {
 		searchCriteria.setTitle("Pierwsza książka");
 		searchCriteria.setAuthors("Kowalski");
 		// when
-		List<BookEntity> books = new ArrayList<BookEntity>();
+		List<BookTo> books = new ArrayList<BookTo>();
 		books = bookService.findBooksBySearchCriteria(searchCriteria);
 		// then
 		assertNotNull(books);
 		assertFalse(books.isEmpty());
-		BookEntity bookEntity = books.get(0);
-		assertEquals("Pierwsza książka", bookEntity.getTitle());
+		BookTo bookTo = books.get(0);
+		assertEquals("Pierwsza książka", bookTo.getTitle());
 	}
 
 }

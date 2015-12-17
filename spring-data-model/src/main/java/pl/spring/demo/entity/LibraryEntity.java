@@ -2,7 +2,6 @@ package pl.spring.demo.entity;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -22,8 +21,18 @@ public class LibraryEntity {
 	@Column(name = "library_name", nullable = false, length = 50)
 	private String name;
 
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "libraryName")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "libraryName")
 	private List<BookEntity> books;
+
+	protected LibraryEntity() {
+		// for hibernate
+	}
+
+	public LibraryEntity(long id, String name, List<BookEntity> books) {
+		this.id = id;
+		this.name = name;
+		this.books = books;
+	}
 
 	public long getId() {
 		return id;

@@ -5,21 +5,27 @@
     <div flash-message="5000" ></div>
 
     <p>Podaj tytuł książki:</p>
-    <input type="text" ng-model="prefix">
-    <button ng-click="search()">Szukaj</button>
-    <button ng-click="addBook()">Dodaj książkę</button>
+    <input id='findBookByTitleInput' type="text" ng-model="prefix">
+    <button id='findBooksInLibraryButton' ng-click="search()">Szukaj</button>
+    <button id="addNewBookButton" ng-click="addBook()">Dodaj książkę</button>
 
     <table>
         <tr>
+        	<th>Id</th>
             <th>Tytuł</th>
             <th>Autorzy</th>
             <th>Usuń</th>
         </tr>
         <tr ng-repeat="book in books">
+        	<td>{{$index +1}}</td>
             <td>{{ book.title }}</td>
-            <td>{{ book.authors }}</td>
             <td>
-                <button ng-click="deleteBook(book.id)">Usuń</button>
+                <div ng-repeat="author in book.authors">
+            		{{author.firstName}} {{author.lastName}}
+            	</div>
+            </td>
+            <td>
+                <button id='deleteBookButton' ng-click="deleteBook(book.id)">Usuń</button>
             </td>
         </tr>
     </table>

@@ -7,6 +7,10 @@ angular.module('app.books').factory('bookService', function (bookRestService) {
         },
         deleteBook: function (bookId) {
             return bookRestService.deleteBook(bookId);
+        },
+        addNewBook: function (newBook) {
+            return bookRestService.addNewBook(newBook);
         }
+        
     };
 });

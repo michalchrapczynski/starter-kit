@@ -2,7 +2,6 @@ package pl.spring.demo.service;
 
 import java.util.List;
 
-import pl.spring.demo.entity.BookEntity;
 import pl.spring.demo.searchcriteria.BookSearchCriteria;
 import pl.spring.demo.to.BookTo;
 
@@ -20,6 +19,6 @@ public interface BookService {
 
 	void removeBookPoster(Long id);
 
-	List<BookEntity> findBooksBySearchCriteria(BookSearchCriteria searchCriteria);
+	List<BookTo> findBooksBySearchCriteria(BookSearchCriteria searchCriteria);
 
 }

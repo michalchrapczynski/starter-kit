@@ -7,8 +7,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import pl.spring.demo.entity.BookEntity;
+import pl.spring.demo.searchCriteriaRepository.searchCriteriaRepository;
 
-public interface BookRepository extends JpaRepository<BookEntity, Long> {
+public interface BookRepository extends JpaRepository<BookEntity, Long>, searchCriteriaRepository {
 
 	@Query("select book from BookEntity book where upper(book.title) like concat(upper(:title), '%')")
 	public List<BookEntity> findBookByTitle(@Param("title") String title);

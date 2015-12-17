@@ -3,9 +3,9 @@ package pl.spring.demo.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,13 +24,13 @@ public class BookEntity implements Serializable {
 	@Column(nullable = false, length = 50)
 	private String title;
 
-	@ManyToMany(fetch = FetchType.EAGER)
+	@ManyToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
 	@JoinTable(name = "BOOK_AUTHOR", joinColumns = {
 			@JoinColumn(name = "id_book", updatable = false, nullable = false) }, inverseJoinColumns = {
 					@JoinColumn(name = "id_author", updatable = false, nullable = false) })
 	private List<AuthorEntity> authors;
 
-	@ManyToOne
+	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
 	@JoinColumn(name = "library_id", nullable = false)
 	private LibraryEntity libraryName;
 
